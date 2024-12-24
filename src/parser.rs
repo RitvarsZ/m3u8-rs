@@ -998,7 +998,10 @@ mod tests {
     fn parse_duration_title_with_commas() {
         assert_eq!(
             duration_title_tag(b"2.002,title,with,commas\nrest"),
-            Result::Ok(("rest".as_bytes(), (2.002f32, Some("title,with,commas".to_string()))))
+            Result::Ok((
+                "rest".as_bytes(),
+                (2.002f32, Some("title,with,commas".to_string()))
+            ))
         );
     }
 
